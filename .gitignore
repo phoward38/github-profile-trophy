@@ -1,3 +1,5 @@
 .vscode
 .env
 .idea
+.vercel
+*.code-workspace
