@@ -48,7 +48,7 @@ export const getNextRankBar = (
     </style>
     <rect
       x="15"
-      y="101"
+      y="90"
       rx="1"
       width="${maxWidth}"
       height="3.2"
@@ -58,7 +58,7 @@ export const getNextRankBar = (
     <rect
       id="${title}-rank-progress"
       x="15"
-      y="101"
+      y="90"
       rx="1"
       height="3.2"
       fill="${color}"
