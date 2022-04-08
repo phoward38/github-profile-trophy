@@ -1,4 +1,4 @@
-export const COLORS: {[name: string]: Theme} = {
+export const COLORS: { [name: string]: Theme } = {
   default: {
     BACKGROUND: "#FFF",
     TITLE: "#000",
@@ -383,6 +383,30 @@ export const COLORS: {[name: string]: Theme} = {
     DEFAULT_RANK_SHADOW: "#3b8eea",
     DEFAULT_RANK_TEXT: "#3A3A3A",
   },
+  github_dark: {
+    BACKGROUND: "#0D1117",
+    TITLE: "#58A6FF",
+    ICON_CIRCLE: "#EEEEEE",
+    TEXT: "#C3D1D9",
+    LAUREL: "#98c379",
+    SECRET_RANK_1: "#e06c75",
+    SECRET_RANK_2: "#c678dd",
+    SECRET_RANK_3: "#61afef",
+    SECRET_RANK_TEXT: "#c678dd",
+    NEXT_RANK_BAR: "#e5c07b",
+    S_RANK_BASE: "#e5c07b",
+    S_RANK_SHADOW: "#e5c07b",
+    S_RANK_TEXT: "#282c34",
+    A_RANK_BASE: "#56b6c2",
+    A_RANK_SHADOW: "#56b6c2",
+    A_RANK_TEXT: "#282c34",
+    B_RANK_BASE: "#c678dd",
+    B_RANK_SHADOW: "#c678dd",
+    B_RANK_TEXT: "#282c34",
+    DEFAULT_RANK_BASE: "#abb2bf",
+    DEFAULT_RANK_SHADOW: "#abb2bf",
+    DEFAULT_RANK_TEXT: "#282c34",
+  },
   algolia: {
     BACKGROUND: "#050f2c",
     TITLE: "#00aeff",
@@ -550,7 +574,7 @@ export const COLORS: {[name: string]: Theme} = {
     DEFAULT_RANK_BASE: "#7f6ceb",
     DEFAULT_RANK_SHADOW: "#a598ed",
     DEFAULT_RANK_TEXT: "#7f6ceb",
-  }
+  },
 };
 
 export interface Theme {
