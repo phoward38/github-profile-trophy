@@ -26,12 +26,12 @@ export class Trophy {
     this.setRank();
   }
   setRank() {
-    const sortedRankConditions = this.rankConditions.sort((a, b) =>
-      RANK_ORDER.indexOf(a.rank) - RANK_ORDER.indexOf(b.rank)
+    const sortedRankConditions = this.rankConditions.sort(
+      (a, b) => RANK_ORDER.indexOf(a.rank) - RANK_ORDER.indexOf(b.rank)
     );
     // Set the rank that hit the first condition
-    const rankCondition = sortedRankConditions.find((r) =>
-      this.score >= r.requiredScore
+    const rankCondition = sortedRankConditions.find(
+      (r) => this.score >= r.requiredScore
     );
     if (rankCondition != null) {
       this.rank = rankCondition.rank;
@@ -49,27 +49,33 @@ export class Trophy {
       return 1;
     }
     const nextRank = RANK_ORDER[nextRankIndex];
-    const nextRankCondition = this.rankConditions.find((r) =>
-      r.rank == nextRank
+    const nextRankCondition = this.rankConditions.find(
+      (r) => r.rank == nextRank
     );
-    const distance = nextRankCondition!.requiredScore -
-      this.rankCondition!.requiredScore;
+    const distance =
+      nextRankCondition!.requiredScore - this.rankCondition!.requiredScore;
     const progress = this.score - this.rankCondition!.requiredScore;
     const result = progress / distance;
     return result;
   }
-  render(theme: Theme,
+  render(
+    theme: Theme,
     x = 0,
     y = 0,
     panelSize = CONSTANTS.DEFAULT_PANEL_SIZE,
     noBackground = CONSTANTS.DEFAULT_NO_BACKGROUND,
-    noFrame = CONSTANTS.DEFAULT_NO_FRAME,
+    noFrame = CONSTANTS.DEFAULT_NO_FRAME
   ): string {
-    const { BACKGROUND: PRIMARY, TITLE: SECONDARY, TEXT, NEXT_RANK_BAR } = theme;
+    const {
+      BACKGROUND: PRIMARY,
+      TITLE: SECONDARY,
+      TEXT,
+      NEXT_RANK_BAR,
+    } = theme;
     const nextRankBar = getNextRankBar(
       this.title,
       this.calculateNextRankPercentage(),
-      NEXT_RANK_BAR,
+      NEXT_RANK_BAR
     );
     return `
         <svg
@@ -89,8 +95,8 @@ export class Trophy {
             height="${panelSize - 1}"
             stroke="#e1e4e8"
             fill="${PRIMARY}"
-            stroke-opacity="${noFrame ? '0' : '1'}"
-            fill-opacity="${noBackground ? '0' : '1'}"
+            stroke-opacity="${noFrame ? "0" : "1"}"
+            fill-opacity="${noBackground ? "0" : "1"}"
           />
           ${getTrophyIcon(theme, this.rank)}
           <text x="50%" y="18" text-anchor="middle" font-family="Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji" font-weight="bold" font-size="13" fill="${SECONDARY}">${
