@@ -113,7 +113,7 @@ export class MultipleLangTrophy extends Trophy{
     const rankConditions = [
       new RankCondition(
         RANK.SECRET,
-        "Rainbow Lang User",
+        "Jack of all Trades",
         10,
       ),
     ];
@@ -193,7 +193,7 @@ export class MultipleOrganizationsTrophy extends Trophy{
       new RankCondition(
         RANK.SECRET,
         // or if this doesn't render well: "Factorum"
-        "Jack of all Trades",
+        "Team Player",
         3,
       ),
     ];
